@@ -1,0 +1,11 @@
+header {
+    color: white;
+    background-color: #130801;
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+}
+
+body{background-image: url(guts.png);}
+
+footer{background-color: #130801;}
