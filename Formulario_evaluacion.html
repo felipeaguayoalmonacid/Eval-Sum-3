@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>////Registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            header {
+                color: white;
+                background-color: #130801;
+                text-align: center;
+                padding: 20px;
+                font-size: x-large;
+            }
+            body{background-image: url(guts.png);}
+            footer{background-color: #130801;}
+        </style>
+        <link rel="shortcut icon" href="papel.ico">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    </head>
+    
+    <header>REGISTRO</header>
+
+    <body>
+        <div>
+            <form action="" class="row g-3 m-5" onsubmit="return validar()">
+                  <div class="col-md-4">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input class="form-control" id="email" type="email">
+                    <div id="msj-email"></div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">Contraseña</label>
+                    <input maxlength="6" type="password" class="form-control" id="contrasena1" placeholder="6 caracteres (mínimo un dígito y letra)">
+                    <div id="msj-pasw1"></div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputPassword4" class="form-label">Reingrese la contraseña</label>
+                    <input maxlength="6" type="password" class="form-control" id="contrasena2" placeholder="6 caracteres (mínimo un dígito y letra)">
+                    <div id="msj-pasw2"></div>
+                  </div>
+
+                    <hr>
+                    
+                  <div class="col-md-6">
+                    <label for="inputAddress2" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="direct" placeholder="Ej: Av Suecia 0142, Providencia">
+                    <div id="msj-direct"></div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <label for="inputZip" class="form-label">Referencia</label>
+                    <input type="text" class="form-control" id="referencia">
+                    <div id="msj-refe"></div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <label for="inputCodPos" class="form-label">Codigo Postal</label>
+                    <input maxlength="7" class="form-control" id="cod_pos" placeholder="Ej: 832 0000">
+                    <div id="msj-codpos"></div>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad">
+                    <div id="msj-city"></div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputComuna" class="form-label">Comuna</label>
+                    <select class="form-select" id="comuna">
+                        <option selected disabled value="">Seleccione...</option>
+                        <option>1. La Unión</option>
+                        <option>2. Futrono</option>
+                        <option>3. Lago Ranco</option>
+                        <option>4. Río Bueno</option>
+                        <option>5. Valdivia</option>
+                        <option>6. Corral</option>
+                        <option>7. Lanco</option>
+                        <option>8. Los Lagos</option>
+                        <option>9. Máfil</option>
+                        <option>10. Mariquina</option>
+                        <option>11. Paillaco</option>
+                        <option>12. Panguipulli</option>
+                    </select>
+                    <div id="msj-comuna"></div>
+                  </div>
+
+                  <hr>
+
+                  <div class="col-md-2">
+                    <label for="inputCity" class="form-label">Telefono</label>
+                    <input maxlength="11" type="text" class="form-control" id="telefono" placeholder="56 XXX-XXX-XXX">
+                    <div id="msj-tel"></div>
+                  </div>
+                  <div class="col-md-2">
+                    <label for="inputCity" class="form-label">Celular</label>
+                    <input maxlength="11" type="text" class="form-control" id="celular" placeholder="569 XXXX-XXXX">
+                    <div id="msj-cel"></div>
+                  </div>
+                  
+                  <hr>
+
+                  <h1><small>Seleccione mínimo 2 aficiones</small></h1>
+
+                  <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="aficion1" name="groupCheckbox">
+                    <label class="form-check-label" for="validationFormCheck1"> Jugar un deporte (Futbol, Baloncesto, Tenis).</label>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="aficion2" name="groupCheckbox">
+                    <label class="form-check-label" for="validationFormCheck1"> Escribir historias o experiencias.</label>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="aficion3" name="groupCheckbox">
+                    <label class="form-check-label" for="validationFormCheck1"> Jugar por computador o consola.</label>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="aficion4" name="groupCheckbox">
+                    <label class="form-check-label" for="validationFormCheck1"> Cocinar o estudiar gastronomia.</label>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="form-check mb-3 ">
+                    <input type="checkbox" class="form-check-input" id="aficion5" name="groupCheckbox">
+                    <label class="form-check-label" for="validationFormCheck1"> Leer libros, comic, mangas, novelas.</label>
+                    <div class="invalid-feedback"></div>
+                  </div>
+
+                  <div id="msj-chec" style="color:blue ;">///Seleccione al menos 2 ///</div>
+
+                  <hr>
+
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-secondary">Registrar</button>
+                  </div>
+                
+                </form>
+        </div>
+        
+        <script src="validacion_evalucaion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    </body>
+    <footer></footer>
+</html>
